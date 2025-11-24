@@ -2,7 +2,7 @@
 📌 Project Overview
 The Student Grading System is a modular Python application designed to read student records from CSV files, calculate their scores using flexible grading strategies, and produce detailed reports.
 # 📝 Student Grading System – Python Project
-
+```
 ## 📌 Project Description
 
 The **Student Grading System** is a modular, well-structured Python application designed to read student records from a CSV file, process their scores through customizable grading strategies, and generate insightful reports.
@@ -18,15 +18,7 @@ Key highlights of the project include:
 ✔ Insightful report generation (grade distribution, pass rate, toppers)
 ✔ GitHub-ready project layout with README, .gitignore, and clean folder organization
 This project demonstrates practical application of Python programming concepts, following **clean architecture principles** by separating models, services, and utilities, making the code easy to understand, extend, and maintain.
-
-### This project showcases:
-- ✔ **Proper Python project structure** (models, services, utils, data)
-- ✔ **Object-Oriented Programming** with polymorphic grading strategies
-- ✔ **CSV data validation** and safe loading
-- ✔ **Customizable command-line interface** using argparse
-- ✔ **Automatic JSON export** of final graded results
-- ✔ **Useful report generation** (grade distribution, pass rate, toppers)
-- ✔ **GitHub-ready layout** with README, .gitignore, and clean folder organization
+```
 
 '''📂 Project Structure
 ```
@@ -87,21 +79,7 @@ See all CLI options:
 python app.py --help
 
 
-🎯 Features
-✔ Load & validate CSV:
-
-Confirms required columns exist
-
-Skips rows with invalid data
-
-Handles incorrect file paths
-
-✔ Grading strategies with OOP:
-
-SimpleAverageStrategy: Equal weight for assignments, quizzes, and exams
-
-WeightedExamHeavyStrategy: Exam 60%, Assignment 20%, Quiz 20%
-
+```
 🎯 Features
 ✔ Load & validate CSV
 
@@ -116,6 +94,7 @@ Catches wrong paths (file vs directory)
 SimpleAverageStrategy: Equal weight for assignment, quiz, exam
 
 WeightedExamHeavyStrategy: Exam = 60%, Assignment = 20%, Quiz = 20%
+```
 
 ✔ Summary reporting:
 
@@ -161,31 +140,7 @@ Top performers
 
 All final results (scores + grades) are stored in clean JSON format.
 
-🧩 Modules & Responsibilities
-📘 models/student.py
 
-Defines the Student dataclass:
-
-ID
-
-Name
-
-Assignment/quiz/exam scores
-
-Computed final score
-
-Letter grade
-
-⚙️ services/loader.py
-⚙️ services/loader.py
-
-Handles CSV loading:
-
-Validates columns
-
-Converts CSV rows into Student objects
-
-Handles file existence and directory errors
 
 🧠 services/analyzer.py
 Contains grading logic:
@@ -204,17 +159,6 @@ Checks file existence
 
 Handles wrong paths (directory instead of file)
 
-🧠 services/analyzer.py
-
-Contains:
-
-GradingStrategy (abstract base class)
-
-SimpleAverageStrategy
-
-WeightedExamHeavyStrategy
-
-apply_grading() to compute final score & letter grade
 
 📊 services/reporter.py
 Provides reporting and saving functions:
@@ -242,49 +186,17 @@ F: <60
 
 📑 Sample CSV (data/students.csv)
 
-📊 services/reporter.py
-
-Provides reporting functions:
-
-save_results_as_json()
-
-print_summary()
-
-print_top_students()
-
-Outputs include:
-
-Grade distribution
-
-Average final score
-
-Pass rate
-
-Failed students
-
-Top N students
-
-🔧 utils/grade_utils.py
-
-Utility to convert numeric score → letter grade:
-
-A (90+)
-
-B (80+)
-
-C (70+)
-
-D (60+)
-
-F (<60)
 
 id,name,assignment,quiz,exam
-1,Alice,85,90,88
-2,Bob,70,65,72
-3,Charlie,92,95,94
-4,Drake,60,58,62
-5,Edward,78,80,76
-
+1,Premila,85,90,88
+2,Babyin,90,65,99
+3,Shanit,92,95,94
+4,Ana,60,58,62
+5,Anwar Hussain,99,80,76
+6,Rohit,88,80,76
+7,Sahil,84,80,76
+8,Raj,99,80,76
+9,Lovely,82,83,75
 
 🖥 Example Console Output
 
@@ -298,9 +210,9 @@ Pass rate: 100.0% (5 / 5)
 Failed students: 0
 
 Top 3 students:
-  1. Charlie - 93.67 [A]
-  2. Alice - 87.67 [B]
-  3. Edward - 78.00 [C]
+  1. Shanit - 93.67 [A]
+  2. Premila - 87.67 [B]
+  3. Raj - 83.00 [C]
 
 
 📦 requirements.txt
@@ -325,8 +237,7 @@ Thumbs.db
 
 
 👤 Author
-K Premila Singha
-GitHub: @Premila12
+[Premila12](https://github.com/Premila12)
 
 
 
