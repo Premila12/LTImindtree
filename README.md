@@ -13,7 +13,7 @@ Key highlights of the project include:
 ✔ Insightful report generation (grade distribution, pass rate, toppers)
 ✔ GitHub-ready project layout with README, .gitignore, and clean folder organization
 
-📂 Project Structure
+'''📂 Project Structure
 
 StudentGradingSystem/
 │
@@ -36,8 +36,8 @@ StudentGradingSystem/
 │
 └─ utils/
     ├─ __init__.py
-    └─ grade_utils.py
-
+    └─ grade_utils.py'''
+    
 
 🚀 Running the Project
 Ensure Python 3.8+ is installed.
