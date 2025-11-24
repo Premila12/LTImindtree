@@ -29,6 +29,7 @@ This project demonstrates practical application of Python programming concepts, 
 - ✔ **GitHub-ready layout** with README, .gitignore, and clean folder organization
 
 '''📂 Project Structure
+```
 
 StudentGradingSystem/
 │

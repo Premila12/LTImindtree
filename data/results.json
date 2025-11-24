@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "name": "Alice",
+        "name": "Premila",
         "assignment": 85.0,
         "quiz": 90.0,
         "exam": 88.0,
@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "name": "Bob",
+        "name": "Baybin",
         "assignment": 90.0,
         "quiz": 65.0,
         "exam": 99.0,
@@ -19,7 +19,7 @@
     },
     {
         "id": "3",
-        "name": "Charlie",
+        "name": "Charlie Puth",
         "assignment": 92.0,
         "quiz": 95.0,
         "exam": 94.0,
@@ -28,7 +28,7 @@
     },
     {
         "id": "4",
-        "name": "Diana",
+        "name": "Ana",
         "assignment": 60.0,
         "quiz": 58.0,
         "exam": 62.0,
@@ -37,11 +37,48 @@
     },
     {
         "id": "5",
-        "name": "Edward",
+        "name": "Anwar Hussain",
         "assignment": 99.0,
         "quiz": 80.0,
         "exam": 76.0,
         "final_score": 85.0,
         "letter_grade": "B"
+    },
+    {
+        "id": "6",
+        "name": "Rohit",
+        "assignment": 88.0,
+        "quiz": 80.0,
+        "exam": 76.0,
+        "final_score": 85.0,
+        "letter_grade": "B"
+    },
+    {
+        "id": "7",
+        "name": "Sahil",
+        "assignment": 84.0,
+        "quiz": 80.0,
+        "exam": 76.0,
+        "final_score": 85.0,
+        "letter_grade": "B"
+    },
+    {
+        "id": "8",
+        "name": "Raj",
+        "assignment": 99.0,
+        "quiz": 80.0,
+        "exam": 76.0,
+        "final_score": 83.0,
+        "letter_grade": "B"
+    },
+    {
+        "id": "9",
+        "name": "Lovely",
+        "assignment": 82.0,
+        "quiz": 83.0,
+        "exam": 75.0,
+        "final_score": 80.0,
+        "letter_grade": "B"
     }
+
 ]
