@@ -1,38 +1,28 @@
-# 📝 Student Grading System – Python Project
+📝 Student Grading System – Python Project
+📌 Project Overview
+The Student Grading System is a modular Python application designed to read student records from CSV files, calculate their scores using flexible grading strategies, and produce detailed reports.
 
-## 📌 Project Description
+Developed as part of hands-on Python training, this project demonstrates practical application of Python concepts like OOP, file handling, and data analysis in a clean, maintainable architecture.
 
+Key highlights of the project include:
+✔ Organized Python project structure (models, services, utils, data)
+✔ Object-Oriented Programming with interchangeable grading strategies
+✔ Robust CSV validation and secure data loading
+✔ CLI-based user interaction via argparse
+✔ Automatic export of results in JSON format
+✔ Insightful report generation (grade distribution, pass rate, toppers)
+✔ GitHub-ready project layout with README, .gitignore, and clean folder organization
 
+📂 Project Structure
 
-The **Student Grading System** is a modular, well-structured Python application designed to read student records from a CSV file, process their scores through customizable grading strategies, and generate insightful reports.
-
-This project was developed as part of the LTIMindtree training program, demonstrating practical application of Python programming concepts learned during the online session training.
-
-It follows **clean architecture principles** by separating models, services, and utilities, making the code easy to understand, extend, and maintain.
-
-### This project showcases:
-
-- ✔ **Proper Python project structure** (models, services, utils, data)
-- ✔ **Object-Oriented Programming** with polymorphic grading strategies
-- ✔ **CSV data validation** and safe loading
-- ✔ **Customizable command-line interface** using `argparse`
-- ✔ **Automatic JSON export** of final graded results
-- ✔ **Useful report generation** (grade distribution, pass rate, toppers)
-- ✔ **GitHub-ready layout** with README, `.gitignore`, and clean folder organization
-
----
-
-## 📂 Project Structure
-
-```
-Project2/
+StudentGradingSystem/
 │
 ├─ app.py
 ├─ README.md
 │
 ├─ data/
 │   ├─ students.csv
-│   └─ results.json          (auto-created after running)
+│   └─ results.json          (generated automatically)
 │
 ├─ models/
 │   ├─ __init__.py
@@ -47,125 +37,127 @@ Project2/
 └─ utils/
     ├─ __init__.py
     └─ grade_utils.py
-```
 
----
 
-## 🚀 How to Run the Project
+🚀 Running the Project
+Ensure Python 3.8+ is installed.
 
-Make sure you have **Python 3.8+** installed.
+Default execution:
 
-### Default run
-```bash
 python app.py
-```
 
-### Choose grading strategy
-```bash
+
+Select grading strategy:
+
 python app.py -s weighted
-```
 
-### Choose custom CSV input and JSON output
-```bash
+
+Custom CSV input and JSON output:
+
 python app.py -i data/custom.csv -o output/results.json
-```
 
-### See all CLI options
-```bash
+
+See all CLI options:
+
 python app.py --help
-```
 
----
 
-## 🎯 Features
+🎯 Features
+✔ Load & validate CSV:
 
-### ✔ Load & validate CSV
-- Ensures required columns exist
-- Skips rows with invalid values
-- Catches wrong paths (file vs directory)
+Confirms required columns exist
 
-### ✔ Grading strategies using OOP
-- **SimpleAverageStrategy**: Equal weight for assignment, quiz, exam
-- **WeightedExamHeavyStrategy**: Exam = 60%, Assignment = 20%, Quiz = 20%
+Skips rows with invalid data
 
-### ✔ Summary reporting
-Displays:
-- Grade counts (A/B/C/D/F)
-- Average final score
-- Pass rate
-- Failed student count
-- Top performers
+Handles incorrect file paths
 
-### ✔ Save final results to JSON
-All final results (scores + grades) are stored in clean JSON format.
+✔ Grading strategies with OOP:
 
----
+SimpleAverageStrategy: Equal weight for assignments, quizzes, and exams
 
-## 🧩 Modules & Responsibilities
+WeightedExamHeavyStrategy: Exam 60%, Assignment 20%, Quiz 20%
 
-### 📘 `models/student.py`
-Defines the `Student` dataclass:
-- ID
-- Name
-- Assignment/quiz/exam scores
-- Computed final score
-- Letter grade
+✔ Summary reporting:
 
-### ⚙️ `services/loader.py`
+Grade counts (A/B/C/D/F)
+
+Average final score
+
+Pass rate and failed student count
+
+Top-performing students
+
+✔ Save results to JSON:
+
+Clean JSON output of all final scores and grades
+
+🧩 Modules & Responsibilities
+
+📘 models/student.py
+Defines the Student dataclass with:
+
+ID, Name
+
+Assignment, Quiz, Exam scores
+
+Final computed score
+
+Letter grade
+
+⚙️ services/loader.py
 Handles CSV loading:
-- Validates columns
-- Converts rows → `Student` objects
-- Checks file existence
-- Handles wrong paths (directory instead of file)
 
-### 🧠 `services/analyzer.py`
-Contains:
-- `GradingStrategy` (abstract base class)
-- `SimpleAverageStrategy`
-- `WeightedExamHeavyStrategy`
-- `apply_grading()` to compute final score & letter grade
+Validates columns
 
-### 📊 `services/reporter.py`
-Provides reporting functions:
-- `save_results_as_json()`
-- `print_summary()`
-- `print_top_students()`
+Converts CSV rows into Student objects
 
-Outputs include:
-- Grade distribution
-- Average final score
-- Pass rate
-- Failed students
-- Top N students
+Handles file existence and directory errors
 
-### 🔧 `utils/grade_utils.py`
-Utility to convert numeric score → letter grade:
-- **A** (90+)
-- **B** (80+)
-- **C** (70+)
-- **D** (60+)
-- **F** (<60)
+🧠 services/analyzer.py
+Contains grading logic:
 
----
+Abstract GradingStrategy base class
 
-## 📑 Sample CSV
+SimpleAverageStrategy and WeightedExamHeavyStrategy
 
-Create this inside `data/students.csv`:
+apply_grading() computes final score and assigns letter grade
 
-```csv
+📊 services/reporter.py
+Provides reporting and saving functions:
+
+save_results_as_json()
+
+print_summary()
+
+print_top_students()
+
+Outputs grade distribution, average score, pass rate, failed students, and top N performers
+
+🔧 utils/grade_utils.py
+Utility to convert numeric scores into letter grades:
+
+A: 90+
+
+B: 80+
+
+C: 70+
+
+D: 60+
+
+F: <60
+
+📑 Sample CSV (data/students.csv)
+
 id,name,assignment,quiz,exam
 1,Alice,85,90,88
 2,Bob,70,65,72
 3,Charlie,92,95,94
 4,Drake,60,58,62
 5,Edward,78,80,76
-```
 
----
 
-## 🖥 Example Console Output
+🖥 Example Console Output
 
-```
 ===== Grade Summary =====
 Grade A: 2 student(s)
 Grade B: 2 student(s)
@@ -179,49 +171,34 @@ Top 3 students:
   1. Charlie - 93.67 [A]
   2. Alice - 87.67 [B]
   3. Edward - 78.00 [C]
-```
 
----
 
-## 📦 `requirements.txt`
+📦 requirements.txt
 
-```txt
-# Standard library only project
+# Standard library only
 # Tested with Python 3.8+
-```
 
----
 
-## 🚫 `.gitignore`
+🚫 .gitignore
 
-```gitignore
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments
 venv/
 .env/
 
-# VS Code settings
 .vscode/
 
-# System files
 .DS_Store
 Thumbs.db
-```
 
-## 👤 Author
 
-**Sanjeev Deori**  
-GitHub: [@SanjeevDeori](https://github.com/SanjeevDeori)  
-Repository: [LTImindtree-Project](https://github.com/SanjeevDeori/LTImindtree-Project)
+👤 Author
+K Premila Singha
+GitHub: @Premila12
 
----
 
-## 🎓 Acknowledgments
 
-This project was developed as part of the **LTIMindtree Python Training Program**. Special thanks to the instructors for their guidance throughout the online session training course.
-
----
+🎓 Acknowledgments
+This project was inspired by hands-on Python training programs and developed to practice real-world application of Python OOP, file handling, and reporting.
